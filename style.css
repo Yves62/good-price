@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(170deg, rgba(2,0,36,1) 0%, rgba(139,139,193,1) 0%, rgba(0,212,255,0.7861738445378151) 100%);
+}
+
+.container{
+    width: 90%;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.container form input{
+   width: 100%;
+   height: 30px;
+}
+
+.container form button{
+   padding: 8px 12px;
+   background-color: midnightblue;
+   color: white;
+   margin-top: 8px;
+}
+
+.container .info-game{
+    margin-top: 5px;
+}
