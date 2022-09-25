@@ -27,6 +27,7 @@ function checkIfGoodNumber() {
         choiceOfUser.style.borderColor = 'green'
         createMessage(`Vous avez gagné. Vous avez réussi en ${numberOfTest} tentatives. Un nouveau chiffre vient d'être généré`);
         generateNumber();
+        numberOfTest = 0;
     } else if (Number(choiceOfUser.value) < randomNumber) {
         numberOfTest++;
         createMessage(`C'est plus, nombre d'essai  ${numberOfTest} `)
