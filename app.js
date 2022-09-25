@@ -25,23 +25,26 @@ function generateNumber() {
 function checkIfGoodNumber() {
     if (Number(choiceOfUser.value) === randomNumber) {
         choiceOfUser.style.borderColor = 'green'
-        createMessage(`Vous avez gagné. Vous avez réussi en ${numberOfTest} tentatives. Un nouveau chiffre vient d'être généré`);
+        createMessage(`Vous avez gagné. Vous avez réussi en ${numberOfTest} tentatives. Un nouveau chiffre vient d'être généré`, 'green');
         generateNumber();
         numberOfTest = 0;
     } else if (Number(choiceOfUser.value) < randomNumber) {
         numberOfTest++;
-        createMessage(`C'est plus, nombre d'essai  ${numberOfTest} `)
+        createMessage(`C'est plus, nombre d'essai  ${numberOfTest} `, 'red')
     } else if (Number(choiceOfUser.value) > randomNumber) {
         numberOfTest++;
-        createMessage(`C'est moins, nombre d'essai ${numberOfTest}`)
+        createMessage(`C'est moins, nombre d'essai ${numberOfTest}`, 'red')
     } else {
         isNotANumber('red',`Vous devez saisir un chiffre`)
     }
 }
 
-function createMessage(message) {
+function createMessage(message, color) {
     let text = document.createElement('li');
     text.textContent = message;
+    text.style.color = 'white';
+    text.style.backgroundColor = color;
+    text.style.padding = "5px"
     infoGame.appendChild(text);
     setTimeout(() => {
         text.remove()
